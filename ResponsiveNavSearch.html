@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="view" content="width=device-width, initial-scale=1">
+	<title>Responsive Navigator Bar with a Search Tab</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		* {
+			box-sizing: 	border-box;
+		}
+		
+		body {
+			margin: 		0;
+			font-family: 	Arial, Helvetica, sans-serif;
+		}
+		
+		.topnav {
+			background-color: #DDC9C9;
+			overflow: 		hidden;
+		}
+		
+		.topnav a {
+			color: 			#8F6567;
+			font-size: 		22px;
+			text-decoration: none;
+			text-align: 	center;
+			padding: 		10px 20px;
+			display: 		block;
+			float: 			left;
+			font-weight: 	bold;
+
+		}
+		
+		.topnav a:hover {
+			background-color: #DAACAD;
+			transition: 	.2s all ease;
+			color: 			#533A3C;
+		}
+		
+		.topnav a.active {
+			background-color: #DAACAD;
+			color: 			#533A3C;
+			font-weight: 	bolder;
+		}
+		
+		div.search-container {
+			border: 		none;
+			float: 			right;
+		}
+		
+		.topnav .search-container input[type=text] {
+			box-sizing: 	border-box;
+			height: 		34px;
+			padding: 		6px;
+			font-size: 		17px;
+			border: 		#DAACAD 1px solid;
+			margin: 		0;
+			border-right: 	none;
+			margin-top: 	7px;
+		}
+		
+		.topnav .search-container button {
+			box-sizing: 	border-box;
+			height: 		34px;
+			float: 			right;
+			padding: 		6px 10px;
+			border-radius: 	0px;
+			border: 		#DAACAD 1px solid;
+			background-color: #F4EBEB;
+			font-size: 		17px;
+			cursor: 		pointer;
+			color: 			#8F6567;
+			margin-top: 	7px;
+			margin-right: 	16px;
+		}
+	
+		.topnav .search-container button:hover{
+			background: 	#DAACAD;
+			color: 			#533A3C;
+		}
+		
+		@media screen and (max-width: 600px) {
+			.topnav .search-container {
+				float: 		none;
+				width: 		100%;
+				
+			}
+			
+			.topnav a {
+				float: 		none;
+				text-align: left;
+				width: 		100%;
+				margin: 	0;
+				padding: 	14px;
+				border: 		#DAACAD 1px solid;
+			border-bottom: 	none;
+			}
+			
+			.topnav .search-container input[type=text], .topnav .search-container button {
+				
+				margin-top: 0px;
+			}
+			
+			.topnav .search-container input[type=text] {
+				width: 		85%;
+				height: 	40px;
+			}
+			
+			.topnav .search-container button {
+				width: 		15%;
+				margin-right: 0px;
+				height: 	40px;
+			}
+			
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="topnav">
+		<a class="active" href="#home">Home</a>
+		<a href="#about">About</a>
+		<a class="lastLink" href="#contact">Contact</a>
+		<div class="search-container">	
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</div>
+	</div>
+	
+</body>
+</html>
